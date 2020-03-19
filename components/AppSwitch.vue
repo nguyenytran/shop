@@ -2,9 +2,13 @@
   <div class="sidearea">
     <h4>Only Show Sale Items</h4>
     <div class="can-toggle demo-rebrand-2">
-      <input id="e" type="checkbox" v-model="trigger" @change="updateSale">
+      <input id="e" v-model="trigger" type="checkbox" @change="updateSale" />
       <label for="e">
-        <div class="can-toggle__switch" data-checked="Yes" data-unchecked="No"></div>
+        <div
+          class="can-toggle__switch"
+          data-checked="Yes"
+          data-unchecked="No"
+        />
       </label>
     </div>
   </div>
@@ -15,19 +19,19 @@ export default {
   data() {
     return {
       trigger: this.checked
-    };
+    }
   },
   computed: {
     checked() {
-      return this.$store.state.sale;
+      return this.$store.state.sale
     }
   },
   methods: {
     updateSale() {
-      this.$store.commit('switchSale');
+      this.$store.commit("switchSale")
     }
   }
-};
+}
 </script>
 
 <style scoped lang="scss">
@@ -37,12 +41,12 @@ h4 {
 
 /* modified from Accessbile Toggle Switch by Chris Hart: https://codepen.io/personable/full/stpwD */
 @mixin can-toggle-branding(
-  $can-toggle-off-color: #777, 
+  $can-toggle-off-color: #777,
   $can-toggle-on-color: #5fc054,
   $can-toggle-inactive-text: rgba(white, 0.5),
-  $can-toggle-transition: cubic-bezier(0,1,0.5,1)
+  $can-toggle-transition: cubic-bezier(0, 1, 0.5, 1)
 ) {
-  input[type='checkbox'] {
+  input[type="checkbox"] {
     &[disabled] ~ label {
       color: rgba($can-toggle-off-color, 0.5);
     }
@@ -88,7 +92,7 @@ h4 {
   }
 
   label {
-    font-family: 'Barlow', sans-serif;
+    font-family: "Barlow", sans-serif;
     cursor: pointer;
     .can-toggle__switch {
       transition: background-color 0.3s $can-toggle-transition;
@@ -106,16 +110,18 @@ h4 {
   }
 }
 
-@mixin can-toggle-appearance ($can-toggle-width: 134px,
+@mixin can-toggle-appearance(
+  $can-toggle-width: 134px,
   $can-toggle-height: 36px,
   $can-toggle-border-radius: 4px,
   $can-toggle-offset: 2px,
   $can-toggle-label-font-size: 14px,
   $can-toggle-switch-font-size: 12px,
-  $can-toggle-shadow: 0 3px 3px rgba(black, 0.2)) {
+  $can-toggle-shadow: 0 3px 3px rgba(black, 0.2)
+) {
   $can-toggle-switch-width: $can-toggle-width/2;
 
-  input[type='checkbox'] {
+  input[type="checkbox"] {
     &:focus ~ label,
     &:hover ~ label {
       .can-toggle__switch {
@@ -130,7 +136,8 @@ h4 {
         .can-toggle__switch {
           &:after {
             transform: translate3d(
-              $can-toggle-width - ($can-toggle-switch-width + $can-toggle-offset),
+              $can-toggle-width -
+                ($can-toggle-switch-width + $can-toggle-offset),
               0,
               0
             );
@@ -171,7 +178,7 @@ h4 {
         left: $can-toggle-offset;
         border-radius: $can-toggle-border-radius/2;
         width: $can-toggle-switch-width - $can-toggle-offset;
-        line-height: $can-toggle-height - ($can-toggle-offset*2);
+        line-height: $can-toggle-height - ($can-toggle-offset * 2);
         font-size: $can-toggle-switch-font-size;
       }
 
@@ -192,7 +199,7 @@ h4 {
     box-sizing: border-box;
   }
 
-  input[type='checkbox'] {
+  input[type="checkbox"] {
     opacity: 0;
     position: absolute;
     top: 0;
@@ -263,8 +270,16 @@ h4 {
 
   &.demo-rebrand-2 {
     cursor: pointer;
-    @include can-toggle-branding (#888, #3e64ea, rgba(white, 0.7), ease);
-    @include can-toggle-appearance (60px, 30px, 22px, 3px, 0, 9px, 0 2px 4px rgba(black, 0.2));
+    @include can-toggle-branding(#888, #3e64ea, rgba(white, 0.7), ease);
+    @include can-toggle-appearance(
+      60px,
+      30px,
+      22px,
+      3px,
+      0,
+      9px,
+      0 2px 4px rgba(black, 0.2)
+    );
   }
 }
 

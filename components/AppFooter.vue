@@ -1,10 +1,15 @@
 <template>
   <footer>
-    Made with 🎸 from <a href="https://twitter.com/sarah_edo" target="_blank">sarah_edo</a>. This project is open source, visit <a href="https://github.com/sdras/sample-vue-shop" target="_blank">the repo.</a>
+    Made with 🎸 from
+    <a href="https://twitter.com/sarah_edo" target="_blank">sarah_edo</a>. This
+    project is open source, visit
+    <a href="https://github.com/sdras/sample-vue-shop" target="_blank">
+      the repo.
+    </a>
   </footer>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 footer {
   display: flex;
   justify-content: center;

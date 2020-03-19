@@ -1,15 +1,22 @@
 <template>
   <div class="item">
     <p>{{ item.name }}</p>
-    <span class="salepill" v-if="item.sale">Sale</span>
-    <img :src="`/${item.img}`" :alt="`Image of ${item.name}`">
+    <span v-if="item.sale" class="salepill">Sale</span>
+    <img :src="`img/${item.img}`" :alt="`Image of ${item.name}`" />
     <p>{{ item.price | usdollar }}</p>
-    <button class="add" @click="addItem">Add Item</button>
+    <button class="add" @click="addItem">
+      Add Item
+    </button>
   </div>
 </template>
 
 <script>
 export default {
+  filters: {
+    usdollar: function(value) {
+      return `$${value}`
+    }
+  },
   props: {
     item: {
       type: Object,
@@ -20,20 +27,15 @@ export default {
       required: true
     }
   },
-  filters: {
-    usdollar: function(value) {
-      return `$${value}`;
-    }
-  },
   methods: {
     addItem() {
-      this.$store.commit('addItem', this.item);
+      this.$store.commit("addItem", this.item)
     }
   }
-};
+}
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .item {
   border-radius: 5px;
   padding: 20px;
@@ -48,7 +50,7 @@ export default {
 .salepill {
   background: rgb(232, 35, 25);
   color: white;
-  font-family: 'Barlow', sans-serif;
+  font-family: "Barlow", sans-serif;
   position: absolute;
   right: 30px;
   top: 60px;
