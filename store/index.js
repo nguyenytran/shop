@@ -8,6 +8,7 @@ const createStore = () => {
       sale: false,
       products: [
         {
+          id: 1,
           name: "Khaki Suede Polish Work Boots",
           price: 149.99,
           category: "women",
@@ -16,6 +17,7 @@ const createStore = () => {
           img: "shoe1.png"
         },
         {
+          id: 2,
           name: "Camo Fang Backpack Jungle",
           price: 39.99,
           category: "women",
@@ -24,6 +26,7 @@ const createStore = () => {
           img: "jacket1.png"
         },
         {
+          id: 3,
           name: "Parka and Quilted Liner Jacket",
           price: 49.99,
           category: "men",
@@ -32,6 +35,7 @@ const createStore = () => {
           img: "jacket2.png"
         },
         {
+          id: 4,
           name: "Cotton Black Cap",
           price: 12.99,
           category: "men",
@@ -40,6 +44,7 @@ const createStore = () => {
           img: "hat1.png"
         },
         {
+          id: 5,
           name: "Knit Sweater with Zips",
           price: 29.99,
           category: "women",
@@ -48,6 +53,7 @@ const createStore = () => {
           img: "sweater1.png"
         },
         {
+          id: 6,
           name: "Long Linen-blend Shirt",
           price: 18.99,
           category: "men",
@@ -56,6 +62,7 @@ const createStore = () => {
           img: "shirt1.png"
         },
         {
+          id: 7,
           name: "Knit Orange Sweater",
           price: 28.99,
           category: "men",
@@ -64,6 +71,7 @@ const createStore = () => {
           img: "sweater2.png"
         },
         {
+          id: 8,
           name: "Cotton Band-collar Blouse",
           price: 49.99,
           category: "men",
@@ -72,6 +80,7 @@ const createStore = () => {
           img: "shirt2.png"
         },
         {
+          id: 9,
           name: "Camo Fang Backpack Jungle",
           price: 59.99,
           category: "women",
@@ -80,6 +89,7 @@ const createStore = () => {
           img: "jacket3.png"
         },
         {
+          id: 10,
           name: "Golden Pilot Jacket",
           price: 129.99,
           category: "women",
@@ -88,6 +98,7 @@ const createStore = () => {
           img: "jacket4.png"
         },
         {
+          id: 11,
           name: "Spotted Patterned Sweater",
           price: 80.99,
           category: "women",
@@ -96,6 +107,7 @@ const createStore = () => {
           img: "sweater4.png"
         },
         {
+          id: 12,
           name: "Double Knit Sweater",
           price: 59.99,
           category: "men",
