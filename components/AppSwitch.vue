@@ -8,7 +8,7 @@
           class="can-toggle__switch"
           data-checked="Yes"
           data-unchecked="No"
-        />
+        ></div>
       </label>
     </div>
   </div>

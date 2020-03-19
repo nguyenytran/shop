@@ -3,8 +3,8 @@
     <div class="wrapper">
       <app-navigation />
       <nuxt />
-      <div class="clear" />
-      <div class="push" />
+      <div class="clear"></div>
+      <div class="push"></div>
     </div>
     <app-footer class="footer" />
   </div>
