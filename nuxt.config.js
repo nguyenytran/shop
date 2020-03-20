@@ -23,7 +23,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ["~/assets/main.css"],
+  css: ["~/assets/main.css", "~/assets/css/tailwind.css"],
   /*
    ** Plugins to load before mounting the App
    */
@@ -35,6 +35,10 @@ export default {
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     "@nuxtjs/tailwindcss"
   ],
+  tailwindcss: {
+    // add '~tailwind.config` alias
+    exposeConfig: true
+  },
   /*
    ** Nuxt.js modules
    */
@@ -43,6 +47,22 @@ export default {
    ** Build configuration
    */
   build: {
+    extractCSS: true,
+    optimization: {
+      splitChunks: {
+        cacheGroups: {
+          styles: {
+            name: "styles",
+            test: /\.(css|vue)$/,
+            chunks: "all",
+            enforce: true
+          }
+        }
+      }
+    },
+    filenames: {
+      chunk: ({ isDev }) => (isDev ? "[name].js" : "[id].[contenthash].js")
+    },
     /*
      ** You can extend webpack config here
      */
